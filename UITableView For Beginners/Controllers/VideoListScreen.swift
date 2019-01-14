@@ -20,40 +20,52 @@ class VideoListScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //this sets video equal to the returned array from our func
-        videos = createVideoArray()
+        addNavBarImage()
         
-        //set this view controller as delegate and data source
+        //this sets video equal to the returned array from our func
+        createVideoArray()
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     //MARK:- Navbar creation
     func addNavBarImage() {
+        let navController = navigationController! //this grabs the nearest ancestor in a view controller hiearchy that is actually a nav controller
+        
+        let image = #imageLiteral(resourceName: "youtube-logo") //youtube logo
+        let imageView = UIImageView(image: image)
+        
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+        
+        let bannerX = bannerWidth / 2 - image.size.width / 2
+        let bannerY = bannerHeight / 2 - image.size.height / 2
+        
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = imageView
+        
         
     }
     
     //MARK:- Array creation
-    func createVideoArray() -> [Video] {
-        //create video objects, place them in a temp array, add this array to global scoped array
-        var tempVideos = [Video]()
-        
+    func createVideoArray() {
         //using image literals here to avoid stringly typed image names
-        let video1 = Video(image: #imageLiteral(resourceName: "int-overview"), title: "iOS Interview Questions", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
-        let video2 = Video(image: #imageLiteral(resourceName: "vlog-4"), title: "A Typical Day for an iOS Contractor", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
+        let video1 = Video(image: #imageLiteral(resourceName: "int-overview"), title: "iOS Interview Questions", url: "https://youtu.be/DkCoGkyxMxY")
+        let video2 = Video(image: #imageLiteral(resourceName: "vlog-4"), title: "A Typical Day for an iOS Contractor", url: "https://www.youtube.com/watch?v=Fi0Ip7Nkp60")
         let video3 = Video(image: #imageLiteral(resourceName: "ss-delegates"), title: "UIButtons in UITableViewCell", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
-        let video4 = Video(image: #imageLiteral(resourceName: "dev-setup"), title: "My Dev Setup", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
-        let video5 = Video(image: #imageLiteral(resourceName: "ss-uipickerview-card"), title: "UIPickerView Tutorial", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
-        let video6 = Video(image: #imageLiteral(resourceName: "beginner-first-app"), title: "Building Your First App", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
+        let video4 = Video(image: #imageLiteral(resourceName: "dev-setup"), title: "My Dev Setup", url: "https://www.youtube.com/watch?v=ZiYx_4eeOms")
+        let video5 = Video(image: #imageLiteral(resourceName: "ss-uipickerview-card"), title: "UIPickerView Tutorial", url: "https://www.youtube.com/watch?v=HkDDGfMiuOA")
+        let video6 = Video(image: #imageLiteral(resourceName: "beginner-first-app"), title: "Building Your First App", url: "https://www.youtube.com/watch?v=aiXvvL1wNUc")
         
-        tempVideos.append(video1)
-        tempVideos.append(video2)
-        tempVideos.append(video3)
-        tempVideos.append(video4)
-        tempVideos.append(video5)
-        tempVideos.append(video6)
-        
-        return tempVideos
+        videos.append(video1)
+        videos.append(video2)
+        videos.append(video3)
+        videos.append(video4)
+        videos.append(video5)
+        videos.append(video6)
     }
 }
 
