@@ -23,7 +23,7 @@ class VideoListScreen: UIViewController {
         addNavBarImage()
         
         //this sets video equal to the returned array from our func
-        createVideoArray()
+        videos = Video.createVideoArray()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -48,24 +48,6 @@ class VideoListScreen: UIViewController {
         navigationItem.titleView = imageView
         
         
-    }
-    
-    //MARK:- Array creation
-    func createVideoArray() {
-        //using image literals here to avoid stringly typed image names
-        let video1 = Video(image: #imageLiteral(resourceName: "int-overview"), title: "iOS Interview Questions", url: "https://youtu.be/DkCoGkyxMxY")
-        let video2 = Video(image: #imageLiteral(resourceName: "vlog-4"), title: "A Typical Day for an iOS Contractor", url: "https://www.youtube.com/watch?v=Fi0Ip7Nkp60")
-        let video3 = Video(image: #imageLiteral(resourceName: "ss-delegates"), title: "UIButtons in UITableViewCell", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
-        let video4 = Video(image: #imageLiteral(resourceName: "dev-setup"), title: "My Dev Setup", url: "https://www.youtube.com/watch?v=ZiYx_4eeOms")
-        let video5 = Video(image: #imageLiteral(resourceName: "ss-uipickerview-card"), title: "UIPickerView Tutorial", url: "https://www.youtube.com/watch?v=HkDDGfMiuOA")
-        let video6 = Video(image: #imageLiteral(resourceName: "beginner-first-app"), title: "Building Your First App", url: "https://www.youtube.com/watch?v=aiXvvL1wNUc")
-        
-        videos.append(video1)
-        videos.append(video2)
-        videos.append(video3)
-        videos.append(video4)
-        videos.append(video5)
-        videos.append(video6)
     }
 }
 
