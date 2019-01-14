@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailViewController: UIViewController {
+    
+    //MARK:- Properties
+    var video: Video?
+    var videoURL: URL!
     
     //MARK:- IBOutlets
     @IBOutlet weak var videoImageView: UIImageView!
@@ -19,11 +24,19 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //if we've got a video
+        if let video = video {
+            videoImageView.image = video.image
+            videoTitleLabel.text = video.title
+            videoDescriptionLabel.text = video.description
+            videoURL = URL(string: video.url)
+        }
     }
     
     //MARK:- IBActions
     @IBAction func watchButtonTapped(_ sender: VideoButton) {
+        let safariVC = SFSafariViewController(url: videoURL)
+        present(safariVC, animated: true, completion: nil)
     }
     
     

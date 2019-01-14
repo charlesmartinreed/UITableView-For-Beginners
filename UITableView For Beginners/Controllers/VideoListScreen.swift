@@ -46,9 +46,9 @@ class VideoListScreen: UIViewController {
         imageView.contentMode = .scaleAspectFit
         
         navigationItem.titleView = imageView
-        
-        
     }
+    
+    
 }
 
 extension VideoListScreen : VideoCellDelegate {
@@ -90,6 +90,22 @@ extension VideoListScreen : UITableViewDataSource, UITableViewDelegate {
         cell.delegate = self
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "masterToDetail" {
+            if let destinationVC = segue.destination as? DetailViewController {
+                if let video = sender as? Video {
+                    destinationVC.video = video
+                }
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //need to perform a segue here
+        let video = videos[indexPath.row]
+        performSegue(withIdentifier: "masterToDetail", sender: video)
     }
     
     
