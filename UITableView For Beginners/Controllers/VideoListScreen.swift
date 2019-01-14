@@ -13,6 +13,8 @@ class VideoListScreen: UIViewController {
 
     //MARK:- Properties
     var videos = [Video]()
+    let cellIdentifier = "VideoCell"
+    let detailViewSegueIdentifier = "MasterToDetail"
     
     //MARK:- IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -83,7 +85,7 @@ extension VideoListScreen : UITableViewDataSource, UITableViewDelegate {
         let video = videos[indexPath.row]
         
     
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell") as! VideoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! VideoCell
         
         //further cell configuration occurs in the cell file itself
         cell.setVideo(video: video)
@@ -93,7 +95,7 @@ extension VideoListScreen : UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "masterToDetail" {
+        if segue.identifier == detailViewSegueIdentifier {
             if let destinationVC = segue.destination as? DetailViewController {
                 if let video = sender as? Video {
                     destinationVC.video = video
@@ -105,7 +107,7 @@ extension VideoListScreen : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //need to perform a segue here
         let video = videos[indexPath.row]
-        performSegue(withIdentifier: "masterToDetail", sender: video)
+        performSegue(withIdentifier: detailViewSegueIdentifier, sender: video)
     }
     
     
