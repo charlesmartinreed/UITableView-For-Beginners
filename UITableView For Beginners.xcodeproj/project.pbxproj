@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		8C18D58621ED001D00ECE64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D58521ED001D00ECE64F /* AppDelegate.swift */; };
-		8C18D58821ED001D00ECE64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D58721ED001D00ECE64F /* ViewController.swift */; };
 		8C18D58B21ED001D00ECE64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C18D58921ED001D00ECE64F /* Main.storyboard */; };
 		8C18D58D21ED001F00ECE64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C18D58C21ED001F00ECE64F /* Assets.xcassets */; };
 		8C18D59021ED001F00ECE64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C18D58E21ED001F00ECE64F /* LaunchScreen.storyboard */; };
+		8C18D59821ED006100ECE64F /* VideoListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59721ED006100ECE64F /* VideoListScreen.swift */; };
+		8C18D59A21ED02EA00ECE64F /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59921ED02EA00ECE64F /* VideoCell.swift */; };
+		8C18D59E21ED03ED00ECE64F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59D21ED03ED00ECE64F /* Video.swift */; };
+		8C18D5A021ED166200ECE64F /* VideoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59F21ED166200ECE64F /* VideoButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C18D58221ED001D00ECE64F /* UITableView For Beginners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITableView For Beginners.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C18D58521ED001D00ECE64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C18D58721ED001D00ECE64F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C18D58A21ED001D00ECE64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C18D58C21ED001F00ECE64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C18D58F21ED001F00ECE64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C18D59121ED001F00ECE64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C18D59721ED006100ECE64F /* VideoListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListScreen.swift; sourceTree = "<group>"; };
+		8C18D59921ED02EA00ECE64F /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		8C18D59D21ED03ED00ECE64F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		8C18D59F21ED166200ECE64F /* VideoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,32 @@
 			isa = PBXGroup;
 			children = (
 				8C18D58521ED001D00ECE64F /* AppDelegate.swift */,
-				8C18D58721ED001D00ECE64F /* ViewController.swift */,
 				8C18D58921ED001D00ECE64F /* Main.storyboard */,
+				8C18D59B21ED02F900ECE64F /* Controllers */,
+				8C18D59C21ED030200ECE64F /* Cells */,
 				8C18D58C21ED001F00ECE64F /* Assets.xcassets */,
 				8C18D58E21ED001F00ECE64F /* LaunchScreen.storyboard */,
 				8C18D59121ED001F00ECE64F /* Info.plist */,
+				8C18D59D21ED03ED00ECE64F /* Video.swift */,
+				8C18D59F21ED166200ECE64F /* VideoButtons.swift */,
 			);
 			path = "UITableView For Beginners";
+			sourceTree = "<group>";
+		};
+		8C18D59B21ED02F900ECE64F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C18D59721ED006100ECE64F /* VideoListScreen.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8C18D59C21ED030200ECE64F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8C18D59921ED02EA00ECE64F /* VideoCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C18D58821ED001D00ECE64F /* ViewController.swift in Sources */,
 				8C18D58621ED001D00ECE64F /* AppDelegate.swift in Sources */,
+				8C18D59E21ED03ED00ECE64F /* Video.swift in Sources */,
+				8C18D59821ED006100ECE64F /* VideoListScreen.swift in Sources */,
+				8C18D59A21ED02EA00ECE64F /* VideoCell.swift in Sources */,
+				8C18D5A021ED166200ECE64F /* VideoButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
