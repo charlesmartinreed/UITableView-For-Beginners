@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ekn-o9-hZp">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,28 +15,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VideoListScreen" customModule="UITableView_For_Beginners" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-mw-ny9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="120" id="x8G-UF-hSV" customClass="VideoCell" customModule="UITableView_For_Beginners" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x8G-UF-hSV" id="JOr-Ph-Qre">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-DK-frI">
-                                                    <rect key="frame" x="12" y="7.5" width="132" height="74"/>
+                                                    <rect key="frame" x="12" y="7.6666666666666714" width="131.33333333333334" height="74"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1Pp-DK-frI" secondAttribute="height" multiplier="16:9" id="RgG-SL-X8v"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-KT-OaT">
-                                                    <rect key="frame" x="156" y="7.5" width="202" height="25"/>
+                                                    <rect key="frame" x="155.33333333333331" y="7.6666666666666679" width="202" height="25.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="VTq-E8-SKO"/>
                                                     </constraints>
@@ -45,7 +45,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7z-mq-omu" customClass="VideoButton" customModule="UITableView_For_Beginners" customModuleProvider="target">
-                                                    <rect key="frame" x="261" y="47" width="90" height="35"/>
+                                                    <rect key="frame" x="260.33333333333337" y="47" width="90" height="35"/>
                                                     <color key="backgroundColor" red="0.90588235289999997" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Rwe-B5-8Os"/>
@@ -60,7 +60,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOS-SZ-1CU" customClass="GhostedVideoButton" customModule="UITableView_For_Beginners" customModuleProvider="target">
-                                                    <rect key="frame" x="156" y="47" width="90" height="35"/>
+                                                    <rect key="frame" x="155.33333333333331" y="47" width="90" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="JW6-K9-gU5"/>
                                                         <constraint firstAttribute="width" constant="90" id="adm-55-xN3"/>
@@ -112,11 +112,83 @@
                     <navigationItem key="navigationItem" id="yVi-Gj-w81"/>
                     <connections>
                         <outlet property="tableView" destination="BC0-mw-ny9" id="9nY-cX-64n"/>
+                        <segue destination="vbV-8A-6D3" kind="show" identifier="masterToDetail" id="vZF-jv-rVs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="yac-9s-Fz8">
+            <objects>
+                <viewController id="vbV-8A-6D3" customClass="DetailViewController" customModule="UITableView_For_Beginners" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Exh-h1-PRu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QK3-uj-oaV">
+                                <rect key="frame" x="32" y="94" width="350" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QK3-uj-oaV" secondAttribute="height" multiplier="16:9" id="hwK-5O-xdG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="py1-Vy-PxN">
+                                <rect key="frame" x="32" y="416" width="350" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5i-2l-gTH" customClass="VideoButton" customModule="UITableView_For_Beginners" customModuleProvider="target">
+                                <rect key="frame" x="114.66666666666669" y="576" width="185" height="40"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="DX6-dJ-2zT"/>
+                                    <constraint firstAttribute="height" constant="40" id="SPR-iC-K8I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="Watch">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="watchButtonTapped:" destination="vbV-8A-6D3" eventType="touchUpInside" id="H55-Af-ArQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urD-c9-2uL">
+                                <rect key="frame" x="36" y="319" width="342" height="27"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A5i-2l-gTH" firstAttribute="centerX" secondItem="Exh-h1-PRu" secondAttribute="centerX" id="5ZZ-Q3-9MI"/>
+                            <constraint firstItem="urD-c9-2uL" firstAttribute="top" secondItem="QK3-uj-oaV" secondAttribute="bottom" constant="28" id="6kd-be-ohM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="A5i-2l-gTH" secondAttribute="bottom" constant="120" id="7lT-6v-9gj"/>
+                            <constraint firstItem="QK3-uj-oaV" firstAttribute="centerX" secondItem="Exh-h1-PRu" secondAttribute="centerX" id="Hf6-HZ-Gh3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="py1-Vy-PxN" secondAttribute="trailing" constant="12" id="OGF-MH-hRr"/>
+                            <constraint firstItem="urD-c9-2uL" firstAttribute="centerX" secondItem="Exh-h1-PRu" secondAttribute="centerX" id="Rwv-Yk-DIe"/>
+                            <constraint firstItem="py1-Vy-PxN" firstAttribute="leading" secondItem="Exh-h1-PRu" secondAttribute="leadingMargin" constant="12" id="UY4-RU-i4F"/>
+                            <constraint firstItem="QK3-uj-oaV" firstAttribute="leading" secondItem="Exh-h1-PRu" secondAttribute="leadingMargin" constant="12" id="VWC-LR-kfK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QK3-uj-oaV" secondAttribute="trailing" constant="12" id="X5l-ve-u05"/>
+                            <constraint firstItem="urD-c9-2uL" firstAttribute="leading" secondItem="Exh-h1-PRu" secondAttribute="leadingMargin" constant="16" id="ivG-Ya-0WK"/>
+                            <constraint firstItem="py1-Vy-PxN" firstAttribute="centerX" secondItem="Exh-h1-PRu" secondAttribute="centerX" id="nHl-ab-gQF"/>
+                            <constraint firstItem="QK3-uj-oaV" firstAttribute="top" secondItem="Exh-h1-PRu" secondAttribute="topMargin" constant="30" id="pqb-HE-yQL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="urD-c9-2uL" secondAttribute="trailing" constant="16" id="sgy-Kv-f8e"/>
+                            <constraint firstItem="py1-Vy-PxN" firstAttribute="top" secondItem="urD-c9-2uL" secondAttribute="bottom" constant="70" id="yzf-cD-dh5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AnU-Da-uPU"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoDescriptionLabel" destination="py1-Vy-PxN" id="bjY-5W-3Fa"/>
+                        <outlet property="videoImageView" destination="QK3-uj-oaV" id="2AA-vr-twN"/>
+                        <outlet property="videoTitleLabel" destination="urD-c9-2uL" id="iqV-ij-Gym"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRW-9Q-psS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OB7-IQ-01D">
@@ -124,7 +196,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ekn-o9-hZp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uda-DQ-n8i">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

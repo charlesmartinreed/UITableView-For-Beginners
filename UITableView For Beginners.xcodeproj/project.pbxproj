@@ -15,6 +15,7 @@
 		8C18D59A21ED02EA00ECE64F /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59921ED02EA00ECE64F /* VideoCell.swift */; };
 		8C18D59E21ED03ED00ECE64F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59D21ED03ED00ECE64F /* Video.swift */; };
 		8C18D5A021ED166200ECE64F /* VideoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59F21ED166200ECE64F /* VideoButtons.swift */; };
+		8C18D5A321ED2A9700ECE64F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D5A221ED2A9700ECE64F /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8C18D59921ED02EA00ECE64F /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		8C18D59D21ED03ED00ECE64F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		8C18D59F21ED166200ECE64F /* VideoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoButtons.swift; sourceTree = "<group>"; };
+		8C18D5A221ED2A9700ECE64F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				8C18D59721ED006100ECE64F /* VideoListScreen.swift */,
+				8C18D5A221ED2A9700ECE64F /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				8C18D58621ED001D00ECE64F /* AppDelegate.swift in Sources */,
 				8C18D59E21ED03ED00ECE64F /* Video.swift in Sources */,
 				8C18D59821ED006100ECE64F /* VideoListScreen.swift in Sources */,
+				8C18D5A321ED2A9700ECE64F /* DetailViewController.swift in Sources */,
 				8C18D59A21ED02EA00ECE64F /* VideoCell.swift in Sources */,
 				8C18D5A021ED166200ECE64F /* VideoButtons.swift in Sources */,
 			);
