@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ekn-o9-hZp">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,37 +15,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VideoListScreen" customModule="UITableView_For_Beginners" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-mw-ny9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="x8G-UF-hSV" customClass="VideoCell" customModule="UITableView_For_Beginners" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="120" id="x8G-UF-hSV" customClass="VideoCell" customModule="UITableView_For_Beginners" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x8G-UF-hSV" id="JOr-Ph-Qre">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-DK-frI">
-                                                    <rect key="frame" x="4" y="7.5" width="132" height="74.5"/>
+                                                    <rect key="frame" x="12" y="7.5" width="132" height="74"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1Pp-DK-frI" secondAttribute="height" multiplier="16:9" id="RgG-SL-X8v"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-KT-OaT">
-                                                    <rect key="frame" x="144" y="7.5" width="49" height="25"/>
+                                                    <rect key="frame" x="156" y="7.5" width="202" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="VTq-E8-SKO"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7z-mq-omu" customClass="VideoButton" customModule="UITableView_For_Beginners" customModuleProvider="target">
-                                                    <rect key="frame" x="249" y="47" width="90" height="35"/>
+                                                    <rect key="frame" x="261" y="47" width="90" height="35"/>
                                                     <color key="backgroundColor" red="0.90588235289999997" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Rwe-B5-8Os"/>
@@ -55,9 +55,12 @@
                                                     <state key="normal" title="Watch Now">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="watchNowTapped:" destination="x8G-UF-hSV" eventType="touchUpInside" id="InK-2Z-BM7"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOS-SZ-1CU" customClass="GhostedVideoButton" customModule="UITableView_For_Beginners" customModuleProvider="target">
-                                                    <rect key="frame" x="144" y="47" width="90" height="35"/>
+                                                    <rect key="frame" x="156" y="47" width="90" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="JW6-K9-gU5"/>
                                                         <constraint firstAttribute="width" constant="90" id="adm-55-xN3"/>
@@ -66,27 +69,32 @@
                                                     <state key="normal" title="Watch Later">
                                                         <color key="titleColor" red="0.90588235294117647" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="watchLaterTapped:" destination="x8G-UF-hSV" eventType="touchUpInside" id="HpR-KW-SLu"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="1Pp-DK-frI" firstAttribute="top" secondItem="JOr-Ph-Qre" secondAttribute="top" constant="7.5" id="1Yq-1E-oQK"/>
-                                                <constraint firstItem="BOS-SZ-1CU" firstAttribute="leading" secondItem="1Pp-DK-frI" secondAttribute="trailing" constant="8" id="58x-0r-llu"/>
+                                                <constraint firstItem="BOS-SZ-1CU" firstAttribute="leading" secondItem="1Pp-DK-frI" secondAttribute="trailing" constant="12" id="58x-0r-llu"/>
                                                 <constraint firstItem="Q7F-KT-OaT" firstAttribute="top" secondItem="JOr-Ph-Qre" secondAttribute="top" constant="7.5" id="GcM-Dr-QeY"/>
                                                 <constraint firstItem="BOS-SZ-1CU" firstAttribute="top" secondItem="Q7F-KT-OaT" secondAttribute="bottom" constant="14.5" id="H7x-DN-8CM"/>
                                                 <constraint firstAttribute="bottom" secondItem="BOS-SZ-1CU" secondAttribute="bottom" constant="7.5" id="OK5-wW-707"/>
-                                                <constraint firstItem="Q7F-KT-OaT" firstAttribute="leading" secondItem="1Pp-DK-frI" secondAttribute="trailing" constant="8" id="SIx-fH-nTz"/>
-                                                <constraint firstItem="1Pp-DK-frI" firstAttribute="leading" secondItem="JOr-Ph-Qre" secondAttribute="leading" constant="4" id="SQ5-sS-dct"/>
+                                                <constraint firstItem="Q7F-KT-OaT" firstAttribute="leading" secondItem="1Pp-DK-frI" secondAttribute="trailing" constant="12" id="SIx-fH-nTz"/>
+                                                <constraint firstItem="1Pp-DK-frI" firstAttribute="leading" secondItem="JOr-Ph-Qre" secondAttribute="leading" constant="12" id="SQ5-sS-dct"/>
                                                 <constraint firstItem="w7z-mq-omu" firstAttribute="top" secondItem="Q7F-KT-OaT" secondAttribute="bottom" constant="14.5" id="aMx-Ld-lML"/>
                                                 <constraint firstAttribute="bottom" secondItem="w7z-mq-omu" secondAttribute="bottom" constant="7.5" id="cF4-uQ-gXZ"/>
                                                 <constraint firstItem="w7z-mq-omu" firstAttribute="leading" secondItem="BOS-SZ-1CU" secondAttribute="trailing" constant="15" id="leD-ic-BAV"/>
-                                                <constraint firstAttribute="bottom" secondItem="1Pp-DK-frI" secondAttribute="bottom" constant="7.5" id="u48-gf-isw"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Pp-DK-frI" secondAttribute="bottom" constant="8" id="u48-gf-isw"/>
                                                 <constraint firstAttribute="trailing" secondItem="w7z-mq-omu" secondAttribute="trailing" constant="15" id="uvl-fm-oHU"/>
-                                                <constraint firstAttribute="trailing" secondItem="Q7F-KT-OaT" secondAttribute="trailing" constant="27" id="ww7-B0-SMA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q7F-KT-OaT" secondAttribute="trailing" constant="8" id="ww7-B0-SMA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="videoImageView" destination="1Pp-DK-frI" id="vBn-cA-dBm"/>
                                             <outlet property="videoTitleLabel" destination="Q7F-KT-OaT" id="BgY-zG-RuB"/>
+                                            <outlet property="watchLaterButton" destination="BOS-SZ-1CU" id="Uu4-am-Fb3"/>
+                                            <outlet property="watchNowButton" destination="w7z-mq-omu" id="FhB-j0-Mgv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -116,7 +124,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ekn-o9-hZp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uda-DQ-n8i">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

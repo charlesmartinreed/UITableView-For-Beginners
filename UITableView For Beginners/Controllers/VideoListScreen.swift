@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class VideoListScreen: UIViewController {
 
@@ -20,24 +21,30 @@ class VideoListScreen: UIViewController {
         super.viewDidLoad()
         
         //this sets video equal to the returned array from our func
-        videos = createArray()
+        videos = createVideoArray()
         
         //set this view controller as delegate and data source
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    //MARK:- Navbar creation
+    func addNavBarImage() {
+        
+    }
+    
     //MARK:- Array creation
-    func createArray() -> [Video] {
+    func createVideoArray() -> [Video] {
         //create video objects, place them in a temp array, add this array to global scoped array
         var tempVideos = [Video]()
         
         //using image literals here to avoid stringly typed image names
-        let video1 = Video(image: #imageLiteral(resourceName: "int-overview"), title: "iOS Interview Questions")
-        let video2 = Video(image: #imageLiteral(resourceName: "vlog-4"), title: "A Typical Day for an iOS Contractor")
-        let video3 = Video(image: #imageLiteral(resourceName: "ss-delegates"), title: "UIButtons in UITableViewCell")
-        let video4 = Video(image: #imageLiteral(resourceName: "dev-setup"), title: "My Dev Setup")
-        let video5 = Video(image: #imageLiteral(resourceName: "ss-uipickerview-card"), title: "UIPickerView Tutorial")
-        let video6 = Video(image: #imageLiteral(resourceName: "beginner-first-app"), title: "Building Your First App")
+        let video1 = Video(image: #imageLiteral(resourceName: "int-overview"), title: "iOS Interview Questions", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
+        let video2 = Video(image: #imageLiteral(resourceName: "vlog-4"), title: "A Typical Day for an iOS Contractor", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
+        let video3 = Video(image: #imageLiteral(resourceName: "ss-delegates"), title: "UIButtons in UITableViewCell", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
+        let video4 = Video(image: #imageLiteral(resourceName: "dev-setup"), title: "My Dev Setup", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
+        let video5 = Video(image: #imageLiteral(resourceName: "ss-uipickerview-card"), title: "UIPickerView Tutorial", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
+        let video6 = Video(image: #imageLiteral(resourceName: "beginner-first-app"), title: "Building Your First App", url: "https://www.youtube.com/watch?v=UPrBXUWPf6Q")
         
         tempVideos.append(video1)
         tempVideos.append(video2)
@@ -48,6 +55,27 @@ class VideoListScreen: UIViewController {
         
         return tempVideos
     }
+}
+
+extension VideoListScreen : VideoCellDelegate {
+    //MARK:- Custom protocol conformation methods
+    func didTapWatchLater(title: String) {
+        //TODO: Add actual Watch Later functionality?
+        let alertTitle = "Watch Later"
+        let message = "\(title) added to Watch Later list"
+        
+        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func didTapWatchNow(url: String) {
+        guard let videoURL = URL(string: url) else { return }
+        let safariVC = SFSafariViewController(url: videoURL)
+        present(safariVC, animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension VideoListScreen : UITableViewDataSource, UITableViewDelegate {
@@ -65,6 +93,7 @@ extension VideoListScreen : UITableViewDataSource, UITableViewDelegate {
         
         //further cell configuration occurs in the cell file itself
         cell.setVideo(video: video)
+        cell.delegate = self
         
         return cell
     }

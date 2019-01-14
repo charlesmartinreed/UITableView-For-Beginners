@@ -67,8 +67,7 @@
 				8C18D58C21ED001F00ECE64F /* Assets.xcassets */,
 				8C18D58E21ED001F00ECE64F /* LaunchScreen.storyboard */,
 				8C18D59121ED001F00ECE64F /* Info.plist */,
-				8C18D59D21ED03ED00ECE64F /* Video.swift */,
-				8C18D59F21ED166200ECE64F /* VideoButtons.swift */,
+				8C18D5A121ED18DF00ECE64F /* Classes */,
 			);
 			path = "UITableView For Beginners";
 			sourceTree = "<group>";
@@ -87,6 +86,15 @@
 				8C18D59921ED02EA00ECE64F /* VideoCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8C18D5A121ED18DF00ECE64F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8C18D59D21ED03ED00ECE64F /* Video.swift */,
+				8C18D59F21ED166200ECE64F /* VideoButtons.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
