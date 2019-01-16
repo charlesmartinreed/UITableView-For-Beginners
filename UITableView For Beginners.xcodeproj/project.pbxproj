@@ -16,6 +16,7 @@
 		8C18D59E21ED03ED00ECE64F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59D21ED03ED00ECE64F /* Video.swift */; };
 		8C18D5A021ED166200ECE64F /* VideoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D59F21ED166200ECE64F /* VideoButtons.swift */; };
 		8C18D5A321ED2A9700ECE64F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D5A221ED2A9700ECE64F /* DetailViewController.swift */; };
+		8CB8571F21EEBE2B007CDBB6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB8571E21EEBE2B007CDBB6 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8C18D59D21ED03ED00ECE64F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		8C18D59F21ED166200ECE64F /* VideoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoButtons.swift; sourceTree = "<group>"; };
 		8C18D5A221ED2A9700ECE64F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8CB8571E21EEBE2B007CDBB6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				8C18D58E21ED001F00ECE64F /* LaunchScreen.storyboard */,
 				8C18D59121ED001F00ECE64F /* Info.plist */,
 				8C18D5A121ED18DF00ECE64F /* Classes */,
+				8CB8571E21EEBE2B007CDBB6 /* UIViewController+Extension.swift */,
 			);
 			path = "UITableView For Beginners";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				8C18D59E21ED03ED00ECE64F /* Video.swift in Sources */,
 				8C18D59821ED006100ECE64F /* VideoListScreen.swift in Sources */,
 				8C18D5A321ED2A9700ECE64F /* DetailViewController.swift in Sources */,
+				8CB8571F21EEBE2B007CDBB6 /* UIViewController+Extension.swift in Sources */,
 				8C18D59A21ED02EA00ECE64F /* VideoCell.swift in Sources */,
 				8C18D5A021ED166200ECE64F /* VideoButtons.swift in Sources */,
 			);

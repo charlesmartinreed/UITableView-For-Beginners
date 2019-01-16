@@ -22,32 +22,13 @@ class VideoListScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addNavBarImage()
+        AddLogoToNavBar() //UIViewController extension method
         
         //this sets video equal to the returned array from our func
         videos = Video.createVideoArray()
         
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    
-    //MARK:- Navbar creation
-    func addNavBarImage() {
-        let navController = navigationController! //this grabs the nearest ancestor in a view controller hiearchy that is actually a nav controller
-        
-        let image = #imageLiteral(resourceName: "youtube-logo") //youtube logo
-        let imageView = UIImageView(image: image)
-        
-        let bannerWidth = navController.navigationBar.frame.size.width
-        let bannerHeight = navController.navigationBar.frame.size.height
-        
-        let bannerX = bannerWidth / 2 - image.size.width / 2
-        let bannerY = bannerHeight / 2 - image.size.height / 2
-        
-        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
-        imageView.contentMode = .scaleAspectFit
-        
-        navigationItem.titleView = imageView
     }
     
     
